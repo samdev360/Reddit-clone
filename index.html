@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldReddit - Flat Dark Theme</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p, ul, li, a, button {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            border: none;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Menu Styles */
+        .menu {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #444;
+        }
+
+        .menu a {
+            color: #f0f0f0;
+            font-size: 1rem;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #ffd700;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .thread {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .thread h2 {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
+        .thread p {
+            font-size: 1rem;
+            color: #ddd;
+            margin-top: 10px;
+        }
+
+        .thread-comments {
+            margin-top: 20px;
+            padding-left: 20px;
+            border-left: 2px solid #444;
+        }
+
+        .comment {
+            background-color: #1f1f1f;
+            border: 1px solid #444;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .comment-author {
+            color: #ffd700;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .comment p {
+            color: #eee;
+        }
+
+        .collapse-button {
+            background-color: #333;
+            color: #f0f0f0;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .collapse-button:hover {
+            background-color: #444;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #777;
+            font-size: 0.9rem;
+            border-top: 1px solid #444;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #ffd700;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-links {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .menu {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Section -->
+    <div class="menu">
+        <div class="menu-left">
+            <a href="#">Home</a>
+            <a href="#">US Politics</a>
+            <a href="#">Global News</a>
+            <a href="#">Linux</a>
+            <a href="#">Philosophy</a>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Thread 1: US Politics -->
+            <div class="thread">
+                <h2>US Politics: The State of Democracy in 2024</h2>
+                <p>As the 2024 presidential election approaches, debates about the state of democracy in the United States are intensifying. With recent controversies over voting rights, the role of social media, and the influence of money in politics, many are questioning the future of democratic governance in America. What are your thoughts?</p>
+                <div class="thread-comments">
+                    <!-- Comment 1 -->
+                    <div class="comment">
+                        <div class="comment-author">User123</div>
+                        <p>I think the biggest issue right now is the polarization of the media. People are only getting news that confirms their biases, which makes it hard to have informed discussions.</p>
+                    </div>
+                    <!-- Comment 2 -->
+                    <div class="comment">
+                        <div class="comment-author">PoliticalGuru</div>
+                        <p>Agreed! And let's not forget about gerrymandering and voter suppression tactics. These are real threats to the democratic process that need to be addressed.</p>
+                    </div>
+                </div>
+                <button class="collapse-button" onclick="toggleComments(this)">Collapse Comments</button>
+            </div>
+
+            <!-- Thread 2: Global News -->
+            <div class="thread">
+                <h2>Global News: Economic Shifts in the Post-COVID World</h2>
+                <p>The global economy is undergoing significant shifts in the wake of the COVID-19 pandemic. From supply chain disruptions to inflationary pressures and the rise of digital currencies, the world is adapting to new economic realities. What changes have you noticed, and what do you think is next for the global economy?</p>
+                <div class="thread-comments">
+                    <!-- Comment 1 -->
+                    <div class="comment">
+                        <div class="comment-author">EconomyWatcher</div>
+                        <p>The rise of digital currencies like Bitcoin and Ethereum is something to watch closely. They could potentially redefine the way we think about money and transactions.</p>
+                    </div>
+                    <!-- Comment 2 -->
+                    <div class="comment">
+                        <div class="comment-author">GlobalCitizen</div>
+                        <p>Supply chain issues are definitely a concern. I've noticed that prices for everyday goods have gone up significantly. It's becoming harder for the average person to make ends meet.</p>
+                    </div>
+                </div>
+                <button class="collapse-button" onclick="toggleComments(this)">Collapse Comments</button>
+            </div>
+
+            <!-- Thread 3: Linux -->
+            <div class="thread">
+                <h2>Linux: Why More People Are Switching to Open Source</h2>
+                <p>Linux has been gaining popularity over the years as a viable alternative to proprietary operating systems like Windows and macOS. What are the main reasons for this shift, and what benefits does Linux offer to its users? Share your experiences and insights!</p>
+                <div class="thread-comments">
+                    <!-- Comment 1 -->
+                    <div class="comment">
+                        <div class="comment-author">LinuxFanatic</div>
+                        <p>The freedom and customization options that Linux provides are unmatched. I love being able to tweak my OS to my liking and not worry about privacy issues.</p>
+                    </div>
+                    <!-- Comment 2 -->
+                    <div class="comment">
+                        <div class="comment-author">TechSavvy</div>
+                        <p>For me, the community support is a huge draw. There's always someone willing to help out with any issues, and it's great to be part of a like-minded community.</p>
+                    </div>
+                </div>
+                <button class="collapse-button" onclick="toggleComments(this)">Collapse Comments</button>
+            </div>
+
+            <!-- Thread 4: Philosophy -->
+            <div class="thread">
+                <h2>Philosophy: The Impact of Stoicism on Modern Life</h2>
+                <p>Stoicism, an ancient Greek philosophy, has seen a resurgence in popularity in recent years. Many find its teachings on resilience, self-control, and rationality particularly relevant in today's fast-paced world. How has Stoicism impacted your life, and do you think it offers a viable path to personal growth?</p>
+                <div class="thread-comments">
+                    <!-- Comment 1 -->
+                    <div class="comment">
+                        <div class="comment-author">DeepThinker</div>
+                        <p>Stoicism has helped me stay calm in stressful situations. It's a great philosophy for focusing on what you can control and letting go of what you can't.</p>
+                    </div>
+                    <!-- Comment 2 -->
+                    <div class="comment">
+                        <div class="comment-author">MindfulMaverick</div>
+                        <p>I think the emphasis on rational thinking and emotional regulation is very powerful. It's a practical philosophy that can be
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
